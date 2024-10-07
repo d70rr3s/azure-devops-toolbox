@@ -26,16 +26,18 @@ from setuptools import setup, find_packages
 
 setup(
     name="azure-devops-toolbox",
-    version="1.0.0",
+    version="1.1.0",
     packages=find_packages(),
     install_requires=[
         "requests",
         "azure-devops",
-        "msrest"
+        "msrest",
+        "python-dotenv"
     ],
     entry_points={
         "console_scripts": [
             "pipeline-cleanup=azure_devops.pipeline_cleanup:main",
+            "user-management=azure_devops.user_management:main",
         ]
     },
     author="Dennis A. Torres",
