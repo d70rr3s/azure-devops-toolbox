@@ -146,7 +146,7 @@ def main():
 
             # Ask the user if they want to remove the user from all teams or individually
             all_teams_response = input("Do you want to remove the user from ALL teams? (yes/no): ").strip().lower()
-            if all_teams_response == 'yes':
+            if all_teams_response == 'yes' or all_teams_response == 'y':
                 # Remove the user from all teams
                 for team in teams:
                     remove_user_from_team(args.organization, user_descriptor, team['descriptor'], personal_access_token)
@@ -155,7 +155,7 @@ def main():
                 for team in teams:
                     team_response = input(
                         f"Do you want to remove the user from {team['details'].principal_name}? (yes/no): ").strip().lower()
-                    if team_response == 'yes':
+                    if team_response == 'yes' or team_response == 'y':
                         remove_user_from_team(args.organization, user_descriptor, team['descriptor'], personal_access_token)
                     else:
                         print(f"Skipping removal from {team['details'].principal_name}.")
