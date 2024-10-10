@@ -38,6 +38,7 @@ setup(
         "console_scripts": [
             "pipeline-cleanup=azure_devops.pipeline_cleanup:main",
             "user-management=azure_devops.user_management:main",
+            "acquia-irregular-envs=acquia.irregular_envs:main"
         ]
     },
     author="Dennis A. Torres",
